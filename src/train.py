@@ -18,11 +18,9 @@ labels=kmeans.fit_predict(df)
 
 pp.plot_segmentation(df, labels, kmeans.cluster_centers_, BASE_DIR / 'screenshots' / 'segmentation_plot.png')
 
-segment_map={0:'premium customer', 1:'average customer', 2:'wealthy, conservative spender', 3:'low-value customer', 4:'impulsive spender'}
-
 df=pd.DataFrame(df)
 df['cluster']=kmeans.labels_
-df['segment']=df['cluster'].map(segment_map)
+df['segment']=df['cluster'].map(pp.segment_map)
 
 pp.export_processed_data(df, BASE_DIR / 'dataset' / 'Mall_Customers_Processed.csv')
 pp.save_model(kmeans, BASE_DIR / 'model' / 'kmeans.joblib')

@@ -2,6 +2,9 @@ import pandas as pd
 import sklearn as sk
 import matplotlib.pyplot as plt
 
+segment_map={0:'premium customer', 1:'average customer', 2:'wealthy, conservative spender', 3:'low-value customer', 4:'impulsive spender'}
+
+
 def load_data(file_path):
     try:
         data = pd.read_csv(file_path)
