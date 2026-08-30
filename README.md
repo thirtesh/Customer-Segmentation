@@ -98,15 +98,15 @@ streamlit run app.py
 
 ![screenshot1](screenshots/B2B model/Capture.PNG)
 
-![screenshot2](screenshots/B2B model/Capture2.PNG)
+![screenshot2](screenshots/B2B/Capture2.PNG)
 
-![screenshot3](screenshots/B2B model/Capture3.PNG)
+![screenshot3](screenshots/B2B/Capture3.PNG)
 
-![screenshot4](screenshots/B2B model/Capture4.PNG)
+![screenshot4](screenshots/B2B/Capture4.PNG)
 
-![screenshot5](screenshots/B2B model/Capture5.PNG)
+![screenshot5](screenshots/B2B/Capture5.PNG)
 
-![screenshot6](screenshots/B2B model/Capture6.PNG)
+![screenshot6](screenshots/B2B/Capture6.PNG)
 
 
 ## Evaluated Graphs
