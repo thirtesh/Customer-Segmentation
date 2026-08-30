@@ -1,49 +1,52 @@
 #Customer Segmentation
 
-A machine learning model that is trained through unsupervised learning using KMeans to segment(cluster) and group customers into different categories(based on their income and spending)
-
+A machine learning model that takes csv file as the input and gives clustered data using KMeans under unsupervised learning. The csv dataset is expected to contain the columns `AnnualIncome` and `SpendingScore`
 
 ## Features
 
-- Handling garbage data
+- Takes a csv file from the user
+- Removes garbage data
+- Feature selection
 - Standardization using `standard scaler`
-- Finding the elbow point using a elbow plot
-- Finding the best value of silhouette score
+- Finds the elbow point using a elbow plot
+- Finds the best value for `K` using both elbow point and silhouette score
+- Displays the cluster plot
+- Provides a downloadable clustered csv file
 - Unsupervised learning
 - Segmentation of dataset using `KMeans`
 - `Streamlit` web application
-- Groups new customers using the trained model
+- Groups a set of customers into `K` number of clusters
 
 
-## Dataset
+## Dataset (Atleast these two columns are required)
 ```
-- CustomerID
-- Gender
-- Age
-- Annual Income(k$)
-- Spending Score(1-100)
+- AnnualIncome
+- SpendingScore
 ```
 
 ## Data Preprocessing
 
 The dataset was processed through following pipeline:
 
-- Renamed and droped unwanted columns
-- Normalised the datset using `Standard Scaler`
-- Ploted the elbow graph of the dataset
-- Ploted the silhouette score graph for different values of `K`
-- Chose the best possible value for `K`
+- Drops unwanted and null columns 
+- Normalizes the datset using `Standard Scaler`
+- Plots the elbow graph of the dataset
+- Plots the silhouette score graph for different values of `K`
+- Finds the best value for `K` using both elbow point and silhouette score
+- Chooses the best possible value for `K`
+- Displays the cluster plot
 
 
 ## Machine Learning Pipeline
 
-- Load unprocessed dataset
-- rename columns and drop unwanted columns
+- Take unprocessed dataset input from user
+- Drop unwanted and null columns
 - standardize(normalise) the data
-- ploting the elbow graph and the silhouette score graph
-- Finding the best possible value for `K`
+- plot the elbow graph and the silhouette score graph
+- Find the best possible value for `K`
+- Ask user confirmation for the `K` value
 - Segmenting(clustering) the dataset using KMeans
-- Evaluating the cluster using relevant metrics
+- Display the clustered data to the user
 - Deployment of `streamlit` application
 
 
@@ -54,7 +57,7 @@ The final deployed model uses:
 - **KMeans**
 
 
-## Evaluation Metrics
+## Evaluation Metrics (V1)
 
 - `Inertia`
 - `Silhouette Score`
@@ -65,7 +68,6 @@ The final deployed model uses:
 
 - `Python`
 - `Pandas`
-- `NumPy`
 - `Scikit-learn`
 - `Matplotlib`
 - `Streamlit`
@@ -87,15 +89,24 @@ streamlit run app.py
 
 ## Challenges Faced
 
-- Finding and cleaning a garbage-free dataset
-- Finding the best `k` value within the constraints of business utility
+- Handling 2 streamlit buttons
+- Allowing the user to select  the `K` value
+- Finding the best `k` value
 
 
 ## Screenshots
 
-![screenshot1](screenshots/Capture.PNG)
+![screenshot1](screenshots/B2B model/Capture.PNG)
 
-![screenshot2](screenshots/Capture2.PNG)
+![screenshot2](screenshots/B2B model/Capture2.PNG)
+
+![screenshot3](screenshots/B2B model/Capture3.PNG)
+
+![screenshot4](screenshots/B2B model/Capture4.PNG)
+
+![screenshot5](screenshots/B2B model/Capture5.PNG)
+
+![screenshot6](screenshots/B2B model/Capture6.PNG)
 
 
 ## Evaluated Graphs
@@ -105,6 +116,15 @@ streamlit run app.py
 ![plot2](screenshots/silhouette_plot.png)
 
 ![plot3](screenshots/segmentation_plot.png)
+
+
+## Evolution of the project
+
+-V1:
+`Trained a KMeans model on a clean customer dataset. Used the saved, pretrained model to group future customers according to the predefined clusters`
+
+-V2:
+`Built a B2B-based automated ml pipeline that gets the csv file input from the user and clusters the customer data. Expects columns AnnualIncome and SpendingScore to be present in the dataset`
 
 
 ## Author
