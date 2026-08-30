@@ -94,7 +94,7 @@ streamlit run app.py
 - Finding the best `k` value
 
 
-## Screenshots
+## Screenshots (V2)
 
 ![screenshot1](screenshots/B2B model/Capture.PNG)
 
@@ -107,15 +107,6 @@ streamlit run app.py
 ![screenshot5](screenshots/B2B/Capture5.PNG)
 
 ![screenshot6](screenshots/B2B/Capture6.PNG)
-
-
-## Evaluated Graphs
-
-![plot1](screenshots/elbow_plot.png)
-
-![plot2](screenshots/silhouette_plot.png)
-
-![plot3](screenshots/segmentation_plot.png)
 
 
 ## Evolution of the project
