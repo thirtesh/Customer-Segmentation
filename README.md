@@ -101,7 +101,7 @@ streamlit run app.py
 
 ## Screenshots (V2)
 
-![screenshot1](screenshots/B2B model/Capture.PNG)
+![screenshot1](screenshots/B2B/Capture.PNG)
 
 ![screenshot2](screenshots/B2B/Capture2.PNG)
 
