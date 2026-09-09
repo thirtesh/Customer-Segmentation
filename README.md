@@ -15,6 +15,7 @@ A machine learning model that takes csv file as the input and gives clustered da
 - Unsupervised learning
 - Segmentation of dataset using `KMeans`
 - `Streamlit` web application
+- `FastAPI` API backend
 - Groups a set of customers into `K` number of clusters
 
 
@@ -72,6 +73,8 @@ The final deployed model uses:
 - `Matplotlib`
 - `Streamlit`
 - `Joblib`
+- `FastAPI`
+- `Uvicorn`
 
 
 ## Installation
@@ -83,6 +86,8 @@ cd Customer-Segmentation
 
 pip install -r requirements.txt
 
+uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload
+
 streamlit run app.py
 ```
 
@@ -92,7 +97,7 @@ streamlit run app.py
 - Handling 2 streamlit buttons
 - Allowing the user to select  the `K` value
 - Finding the best `k` value
-
+- Transfering dataset between `Streamlit` frontend and `FastAPI` backend
 
 ## Screenshots (V2)
 
@@ -115,7 +120,7 @@ streamlit run app.py
 `Trained a KMeans model on a clean customer dataset. Used the saved, pretrained model to group future customers according to the predefined clusters`
 
 -V2:
-`Built a B2B-based automated ml pipeline that gets the csv file input from the user and clusters the customer data. Expects columns AnnualIncome and SpendingScore to be present in the dataset`
+`Built a B2B-based automated ml pipeline that gets the csv file input from the user and clusters the customer data. Expects columns AnnualIncome and SpendingScore to be present in the dataset. Built frontend using streamlit and backend using fastapi`
 
 
 ## Author
